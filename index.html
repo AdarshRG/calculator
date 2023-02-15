@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<style>
+input[type="text"] {
+  width: 400px;
+  height: 90px;
+  
+}
+button{
+    margin-right: 11px;
+    width: 55px;
+    
+}
+.a2{
+    position: absolute;
+    height: 90px;
+}
+ul{
+    margin-left: -30px;
+}
+
+</style>
+<body>
+    <div class=" bg bg-dark container mt-5 p-5" style="width: 450px;height: 450px;"  >
+<form style="margin-left: -18px;" action="">
+   <input id="result" type="text" class="form-control " >
+</form>
+<ul>
+    <button onclick="displayNum()" type="Submit"class="btn mt-3 btn-outline-primary ">OFF</button>
+    <button onclick="displayNum()" type="Submit"class="btn mt-3 btn-outline-primary ">MRC</button>
+    <button onclick="displayNum()" type="Submit"class="btn mt-3 btn-outline-primary ">M-</button>
+    <button onclick="displayNum()" type="Submit"class="btn mt-3 btn-outline-primary ">M+</button>
+    <button onclick="displayNum('÷')" type="Submit"class="btn mt-3 btn-outline-primary ">÷</button>
+
+</ul>
+<ul>
+    <button onclick="displayNum('%')" type="Submit"class="btn  btn-outline-primary ">%</button>
+    <button onclick="displayNum(7)" type="Submit"class="btn  btn-outline-primary ">7</button>
+    <button onclick="displayNum(8)" type="Submit"class="btn  btn-outline-primary ">8</button>
+    <button onclick="displayNum(9)" type="Submit"class="btn  btn-outline-primary ">9</button>
+    <button onclick="displayNum('*')" type="Submit"class="btn  btn-outline-primary ">*</button>
+
+</ul>
+<ul>
+    <button onclick="displayNum('/')" type="Submit"class="btn  btn-outline-primary ">/</button>
+    <button onclick="displayNum(4)" type="Submit"class="btn  btn-outline-primary ">4</button>
+    <button onclick="displayNum(5)" type="Submit"class="btn  btn-outline-primary ">5</button>
+    <button onclick="displayNum(6)" type="Submit"class="btn  btn-outline-primary ">6</button>
+    <button onclick="displayNum('-')" type="Submit"class="btn  btn-outline-primary ">-</button>
+
+</ul>
+<ul>
+    <button onclick="backSpace()" type="Submit"class="btn  btn-outline-primary ">C</button>
+    <button onclick="displayNum(1)" type="Submit"class="btn  btn-outline-primary ">1</button>
+    <button onclick="displayNum(2)" type="Submit"class="btn  btn-outline-primary ">2</button>
+    <button onclick="displayNum(3)" type="Submit"class="btn  btn-outline-primary ">3</button>
+    <button onclick="displayNum('+')" type="Submit"class="btn  btn-outline-primary a2">+</button>
+
+</ul>
+<ul>
+    <button onclick="allClear()" type="Submit"class="btn  btn-outline-primary ">AC</button>
+    <button onclick="displayNum(0)" type="Submit"class="btn  btn-outline-primary ">0</button>
+    <button onclick="displayNum('.')" type="Submit"class="btn  btn-outline-primary ">.</button>
+    <button onclick="evaluateExpr()" type="Submit"class="btn  btn-outline-primary ">=</button>
+
+</ul>
+</div>
+</body>
+<script src="./calc.js">
+    
+        function Check(value){
+            screen = document.querySelector(".calculator-screen")
+      if (screen.value === "0") {
+        screen.value = digit;
+      } else {
+        screen.value += digit;
+      }
+    }
+</script >
+
+</html>
